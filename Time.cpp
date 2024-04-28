@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-class Time {
+class Time 
+{
 private:
     int hours;
     int minutes;
@@ -15,13 +16,15 @@ public:
     Time(int h, int m, int s) : hours(h), minutes(m), seconds(s) {}
 
     // Overload the << operator for correct display
-    friend ostream& operator<<(ostream& os, const Time& t) {
+    friend ostream& operator<<(ostream& os, const Time& t) 
+    {
         os << t.hours << " hours, " << t.minutes << " minutes, " << t.seconds << " seconds";
         return os;
     }
 };
 
-int main() {
+int main() 
+{
     // Create a Time object using the parameterized constructor
     Time t1(2, 30, 45);
 
